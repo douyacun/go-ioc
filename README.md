@@ -22,7 +22,7 @@ Let me emphasize that some more. HUGE improvement in code quality.
 
 # 安装
 
-``
+`go get github.com/douyacun/go-ioc`
 
 # 用法
 
@@ -96,15 +96,15 @@ service.Print()
 使用依赖注入后
 
 ```
-	di.Register("message", "hello world")
-	di.Register("userName", "douyacun")
-	di.Register("printer", &MessagePrinterImpl{})
-	di.Register("userProvider", &UserProviderImpl{})
+di.Register("message", "hello world")
+di.Register("userName", "douyacun")
+di.Register("printer", &MessagePrinterImpl{})
+di.Register("userProvider", &UserProviderImpl{})
 
-	service := &GreeterService{}
+service := &GreeterService{}
 
-	di.MustBind(service)
-	service.Print()
+di.MustBind(service)
+service.Print()
 ```
 
 
