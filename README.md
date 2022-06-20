@@ -22,7 +22,9 @@ Let me emphasize that some more. HUGE improvement in code quality.
 
 # 安装
 
-`go get github.com/douyacun/go-ioc`
+```
+go get github.com/douyacun/go-ioc
+```
 
 # 用法
 
