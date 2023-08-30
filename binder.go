@@ -6,8 +6,6 @@ import (
 	"strings"
 
 	"github.com/pkg/errors"
-
-	"github.com/sirupsen/logrus"
 )
 
 var (
@@ -43,10 +41,6 @@ func (b *bind) bind(target reflect.Value, registry *Ioc) error {
 		}
 		v = v.Elem()
 	}
-	t := v.Type()
-
-	logrus.Infof("dp bind type:%s, canset:%v", t.Name(), v.CanSet())
-
 	if v.Kind() != reflect.Struct {
 		return ErrNotSupport
 	}
